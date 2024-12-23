@@ -1,9 +1,14 @@
 import { Text, View, StyleSheet } from "react-native";
+import { Image } from "expo-image";
+
+const PlaceholderImage = require("../../assets/images/background-image.png");
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello StickerSmash.</Text>
+      <View style={styles.imageContainer}>
+        <Image source={PlaceholderImage} style={styles.image} />
+      </View>
     </View>
   );
 }
@@ -11,16 +16,15 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#25292e",
   },
-  text: {
-    color: "white",
+  image: {
+    width: 320,
+    height: 440,
+    borderRadius: 18,
   },
-  button: {
-    fontSize: 20,
-    textDecorationLine: "underline",
-    color: "#fff",
+  imageContainer: {
+    flex: 1,
   },
 });
