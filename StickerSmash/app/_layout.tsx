@@ -1,16 +1,18 @@
 import { Stack } from "expo-router";
+import { LogBox } from "react-native";
+
+LogBox.ignoreAllLogs(true);
 
 export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
+        name="(tabs)"
         options={{
-          headerTitle: "Sticker Smash",
-          headerLeft: () => <></>,
+          headerShown: false,
         }}
       />
-      <Stack.Screen name="about" options={{ headerTitle: "About" }} />
+
       <Stack.Screen name="notFound" options={{ headerTitle: "Not found" }} />
     </Stack>
   );

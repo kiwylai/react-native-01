@@ -5,9 +5,6 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello StickerSmash.</Text>
-      <Link href={"/about"} style={styles.button}>
-        About
-      </Link>
     </View>
   );
 }
