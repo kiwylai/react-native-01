@@ -28,7 +28,11 @@ export default function Index() {
       </View>
 
       <View style={styles.footerContainer}>
-        <Button label="Choose a photo" theme="primary" />
+        <Button
+          onPress={pickImageSsync}
+          label="Choose a photo"
+          theme="primary"
+        />
         <Button label="Use this photo" />
       </View>
     </View>
