@@ -4,6 +4,7 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 type Props = PropsWithChildren<{
   isVisible: boolean;
+  children: true;
   onClose: () => void;
 }>;
 
