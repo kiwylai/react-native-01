@@ -1,5 +1,5 @@
-import { ImageSourcePropType, View } from "react-native";
-import { Image, type ImageSource } from "expo-image";
+import { ImageSourcePropType } from "react-native";
+import { type ImageSource } from "expo-image";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -36,14 +36,14 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
 
   const drag = Gesture.Pan().onChange((event) => {
     translateX.value += event.changeX;
-    translateY.value += event.absoluteY;
+    translateY.value += event.changeY;
   });
 
   const containerStyle = useAnimatedStyle(() => {
     return {
       transform: [
         { translateX: translateX.value },
-        { translateX: translateX.value },
+        { translateY: translateY.value },
       ],
     };
   });
