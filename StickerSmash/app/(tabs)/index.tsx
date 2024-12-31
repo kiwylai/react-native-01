@@ -64,7 +64,7 @@ export default function Index() {
   const onSaveImageAsync = async () => {
     if (Platform.OS === "web") {
       try {
-        // @ts-ignore
+        //@ts-ignore
         const dataUrl = await domtoinage.toJpeg(imageRef.current, {
           quality: 0.95,
           width: 320,
@@ -85,7 +85,7 @@ export default function Index() {
     <View style={styles.container}>
       <View ref={imageRef} style={styles.imageContainer}>
         <ImageViewer
-          imgSource={PlaceholderImage}
+          imgSource={selectedImage || PlaceholderImage}
           selectedImage={selectedImage}
         />
         {pickedEmoji && (
